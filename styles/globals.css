@@ -1,0 +1,87 @@
+html,
+body {
+  width: 100%;
+  height: auto;
+  margin: 0px;
+  padding: 0px;
+  background-color: rgb(50, 50, 50);
+}
+
+/* Reset CSS */
+* {
+  box-sizing: border-box;
+}
+
+#__next {
+  height: 100%;
+}
+
+main {
+  height: 100%;
+}
+
+
+/* img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  display: inline-block;
+  background-position: center;
+  object-fit: contain;
+} */
+
+/* Main CSS */
+.grid-wrapper>div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid-wrapper>div>a {
+  width: 100%;
+  height: 100%;
+}
+
+.grid-wrapper>div>a>img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.grid-wrapper>div>a>img:hover {
+  filter: brightness(120%) saturate(150%);
+}
+
+.grid-wrapper>div>a>img:active {
+  filter: brightness(120%) saturate(100%);
+}
+
+.grid-wrapper {
+  margin-top: 110px;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  grid-auto-rows: 200px;
+  grid-auto-flow: dense;
+}
+
+.grid-wrapper .large {
+  grid-column: span 2;
+}
+
+.grid-wrapper .portrait {
+  grid-row: span 2;
+}
+
+.grid-wrapper .landscape {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+
+@media (max-width: 450px) {
+  .grid-wrapper {
+    grid-template-columns: 100%;
+  }
+}

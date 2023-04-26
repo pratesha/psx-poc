@@ -1,0 +1,53 @@
+.appBar{
+    background-color: rgb(50, 50, 50);
+}
+.toolbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.iconSection {
+    display: flex;
+    align-items: center;
+}
+
+.section {
+    display: flex;
+    gap: 5px;
+}
+
+.section a {
+    text-decoration: none;
+    color: rgb(144, 144, 144);
+    font-weight: 500;
+}
+
+.section a:nth-child(2) {
+    color: rgb(226, 226, 226);
+}
+
+
+@media (max-width: 650px) {
+
+    /* Styles to apply when screen width is 570px or less */
+    .brandName {
+        display: none;
+    }
+}
+
+@media (max-width: 500px) {
+
+    /* Styles to apply when screen width is 410px or less */
+    .signin {
+        display: none;
+    }
+
+    .iconSection {
+        flex-grow: 1;
+    }
+
+    .section {
+        flex-grow: 1;
+    }
+}
